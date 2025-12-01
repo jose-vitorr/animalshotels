@@ -55,7 +55,6 @@ const Tutores = () => {
     handleSubmit,
     control,
     reset,
-    setValue,
     formState: { errors, isSubmitting },
   } = useForm<TutorFormData>({
     defaultValues: {

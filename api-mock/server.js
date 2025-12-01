@@ -8,6 +8,22 @@ const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
+// ============================================
+// CONFIGURAÇÃO DE CORS 
+// ============================================
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // Permitir qualquer origem
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  
+  // Responder preflight requests
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  
+  next();
+});
+
 // Middleware para fazer parse do body
 server.use(jsonServer.bodyParser);
 

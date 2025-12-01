@@ -19,6 +19,30 @@
       "password": "senha123"
     }
   ],
-  "tutores": [],
-  "animais": []
+  "tutores": [
+    {
+      "nome": "José Vitor",
+      "email": "josevitoraraujodias2011@gmail.com",
+      "telefone": "(86) 98833-2175",
+      "id": 1
+    }
+  ],
+  "animais": [
+    {
+      "nome": "Chico",
+      "especie": "cachorro",
+      "raca": "SRD",
+      "idade": 3,
+      "tutorId": 1,
+      "id": 1
+    },
+    {
+      "nome": "Lindomar",
+      "especie": "cachorro",
+      "raca": "SRD",
+      "idade": 0,
+      "tutorId": 1,
+      "id": 2
+    }
+  ]
 }
