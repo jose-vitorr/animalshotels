@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "email": "admin@animalshotels.com",
+      "password": "123456"
+    },
+    {
+      "id": "1764554295275",
+      "nome": "Teste",
+      "email": "teste@teste.com",
+      "password": "123456"
+    }
+  ],
+  "tutores": [],
+  "animais": []
+}
