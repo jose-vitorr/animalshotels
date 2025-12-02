@@ -41,8 +41,8 @@ const PORT = 3000;
 
 // Iniciar servidor
 server.listen(PORT, () => {
-  console.log(`🚀 API Mock rodando em http://localhost:${PORT}`);
-  console.log(`📋 Endpoints disponíveis:`);
+  console.log(` API Mock rodando em http://localhost:${PORT}`);
+  console.log(` Endpoints disponíveis:`);
   console.log(`   POST   http://localhost:${PORT}/auth/login`);
   console.log(`   POST   http://localhost:${PORT}/auth/register`);
   console.log(`   GET    http://localhost:${PORT}/tutores`);

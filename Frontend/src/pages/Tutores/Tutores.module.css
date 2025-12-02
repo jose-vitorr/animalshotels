@@ -1,21 +1,19 @@
-/* src/pages/Tutores/Tutores.module.css */
-
 .container {
   min-height: 100vh;
   background-color: #f9fafb;
 }
 
 .content {
-  max-width: 1200px;
+  max-width: 1400px; /* ✅ AUMENTADO DE 1200px PARA 1400px */
   margin: 0 auto;
-  padding: 32px 24px;
+  padding: 40px 32px; /* ✅ AUMENTADO PADDING */
 }
 
 .topSection {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px; /* ✅ AUMENTADO DE 32px PARA 40px */
 }
 
 .titleSection {
@@ -23,22 +21,22 @@
 }
 
 .title {
-  font-size: 32px;
+  font-size: 36px; /* ✅ AUMENTADO DE 32px PARA 36px */
   font-weight: 700;
   color: #111827;
   margin: 0 0 8px 0;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 18px; /* ✅ AUMENTADO DE 16px PARA 18px */
   color: #6b7280;
   margin: 0;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); /* ✅ AUMENTADO DE 320px PARA 380px */
+  gap: 28px; /* ✅ AUMENTADO DE 24px PARA 28px */
 }
 
 .emptyState {
@@ -47,28 +45,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 100px 20px; /* ✅ AUMENTADO DE 80px PARA 100px */
   text-align: center;
 }
 
 .emptyIcon {
-  font-size: 80px;
-  margin-bottom: 24px;
+  font-size: 96px; /* ✅ AUMENTADO DE 80px PARA 96px */
+  margin-bottom: 28px; /* ✅ AUMENTADO DE 24px PARA 28px */
   opacity: 0.5;
 }
 
 .emptyTitle {
-  font-size: 24px;
+  font-size: 28px; /* ✅ AUMENTADO DE 24px PARA 28px */
   font-weight: 700;
   color: #111827;
-  margin: 0 0 12px 0;
+  margin: 0 0 16px 0; /* ✅ AUMENTADO DE 12px PARA 16px */
 }
 
 .emptyText {
-  font-size: 16px;
+  font-size: 18px; /* ✅ AUMENTADO DE 16px PARA 18px */
   color: #6b7280;
-  margin: 0 0 24px 0;
-  max-width: 400px;
+  margin: 0 0 28px 0; /* ✅ AUMENTADO DE 24px PARA 28px */
+  max-width: 500px; /* ✅ AUMENTADO DE 400px PARA 500px */
 }
 
 .loading {
@@ -77,11 +75,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 100px 20px; /* ✅ AUMENTADO DE 80px PARA 100px */
 }
 
 .loadingSpinner {
-  font-size: 48px;
+  font-size: 56px; /* ✅ AUMENTADO DE 48px PARA 56px */
   animation: spin 1s linear infinite;
 }
 
@@ -99,24 +97,95 @@
   background-color: #fee2e2;
   border: 1px solid #fecaca;
   color: #991b1b;
-  padding: 16px;
+  padding: 18px; /* ✅ AUMENTADO DE 16px PARA 18px */
   border-radius: 8px;
   text-align: center;
+  font-size: 16px; /* ✅ ADICIONADO TAMANHO DE FONTE */
 }
 
-/* Responsividade */
+/* ✅ RESPONSIVIDADE MELHORADA PARA DIFERENTES TELAS */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .content {
+    max-width: 100%;
+    padding: 32px 24px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
+  .content {
+    padding: 24px 20px;
+  }
+
   .topSection {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    margin-bottom: 28px;
   }
 
   .title {
-    font-size: 24px;
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 15px;
   }
 
   .grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .emptyState {
+    padding: 60px 20px;
+  }
+
+  .emptyIcon {
+    font-size: 72px;
+  }
+
+  .emptyTitle {
+    font-size: 24px;
+  }
+
+  .emptyText {
+    font-size: 16px;
+  }
+}
+
+/* Desktop Grande */
+@media (min-width: 1440px) {
+  .content {
+    max-width: 1600px; /* ✅ AINDA MAIOR EM TELAS GRANDES */
+    padding: 48px 40px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 32px;
   }
 }

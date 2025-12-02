@@ -30,18 +30,25 @@
   transition: all 0.3s ease;
   font-family: inherit;
   background-color: white;
+  color: #111827; /* ✅ TEXTO PRETO PARA CONTRASTE */
+}
+
+.input::placeholder {
+  color: #9ca3af; /* ✅ PLACEHOLDER CINZA */
 }
 
 .input:focus {
   outline: none;
   border-color: #3ECF8E;
   box-shadow: 0 0 0 3px rgba(62, 207, 142, 0.1);
+  color: #111827; /* ✅ TEXTO PRETO QUANDO FOCADO */
 }
 
 .input:disabled {
   background-color: #f3f4f6;
   cursor: not-allowed;
   opacity: 0.6;
+  color: #6b7280; /* ✅ TEXTO CINZA QUANDO DESABILITADO */
 }
 
 .input.error {

@@ -70,7 +70,7 @@ const TutorCard = ({ tutor, animais, onEdit, onDelete }: TutorCardProps) => {
           onClick={() => onEdit(tutor)}
           style={{ flex: 1 }}
         >
-          ✏️ Editar
+           Editar
         </Button>
         <Button
           variant="danger"
@@ -78,7 +78,7 @@ const TutorCard = ({ tutor, animais, onEdit, onDelete }: TutorCardProps) => {
           onClick={() => onDelete(tutor)}
           style={{ flex: 1 }}
         >
-          🗑️ Excluir
+           Excluir
         </Button>
       </div>
     </div>

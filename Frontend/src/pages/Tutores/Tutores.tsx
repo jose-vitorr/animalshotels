@@ -571,7 +571,7 @@ const Tutores = () => {
               }}
             >
               <p style={{ fontSize: '14px', color: '#991b1b', margin: 0 }}>
-                ⚠️ Esta ação não pode ser desfeita. Todos os animais associados a este tutor também serão excluídos.
+                 Esta ação não pode ser desfeita. Todos os animais associados a este tutor também serão excluídos.
               </p>
             </div>
           </div>

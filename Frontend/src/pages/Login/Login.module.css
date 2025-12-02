@@ -1,10 +1,12 @@
 .container {
   min-height: 100vh;
+  max-height: 100vh; /* ✅ LIMITA ALTURA PARA NÃO TER SCROLL */
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 20px;
+  overflow: hidden; /* ✅ ESCONDE SCROLL */
 }
 
 .card {
@@ -12,9 +14,30 @@
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 440px;
-  padding: 48px;
+  max-width: 500px;
+  max-height: 90vh; /* ✅ LIMITA ALTURA MÁXIMA */
+  padding: 40px; /* ✅ PADDING REDUZIDO DE 48px PARA 40px */
   animation: slideUp 0.4s ease;
+  overflow-y: auto; /* ✅ SCROLL INTERNO SE NECESSÁRIO */
+}
+
+/* ✅ ESTILIZAÇÃO DA SCROLLBAR INTERNA */
+.card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background: #3ECF8E;
+  border-radius: 10px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+  background: #2da871;
 }
 
 @keyframes slideUp {
@@ -32,32 +55,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px; /* ✅ REDUZIDO DE 32px PARA 24px */
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 70px; /* ✅ REDUZIDO DE 80px PARA 70px */
+  height: 70px;
   background: linear-gradient(135deg, #3ECF8E 0%, #2da871 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
-  margin-bottom: 16px;
+  font-size: 36px; /* ✅ REDUZIDO DE 40px PARA 36px */
+  margin-bottom: 14px; /* ✅ REDUZIDO DE 16px PARA 14px */
   box-shadow: 0 4px 12px rgba(62, 207, 142, 0.3);
 }
 
 .title {
-  font-size: 28px;
+  font-size: 26px; /* ✅ REDUZIDO DE 28px PARA 26px */
   font-weight: 700;
   color: #111827;
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0; /* ✅ REDUZIDO DE 8px PARA 6px */
   text-align: center;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 15px; /* ✅ REDUZIDO DE 16px PARA 15px */
   color: #6b7280;
   margin: 0;
   text-align: center;
@@ -66,24 +89,24 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 32px;
+  gap: 18px; /* ✅ REDUZIDO DE 20px PARA 18px */
+  margin-top: 24px; /* ✅ REDUZIDO DE 32px PARA 24px */
 }
 
 .error {
   background-color: #fee2e2;
   border: 1px solid #fecaca;
   color: #991b1b;
-  padding: 12px 16px;
+  padding: 10px 14px; /* ✅ REDUZIDO DE 12px 16px */
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 13px; /* ✅ REDUZIDO DE 14px PARA 13px */
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .footer {
-  margin-top: 24px;
+  margin-top: 20px; /* ✅ REDUZIDO DE 24px PARA 20px */
   text-align: center;
   font-size: 14px;
   color: #6b7280;
@@ -107,14 +130,54 @@
 }
 
 .forgotPassword .link {
-  font-size: 14px;
+  font-size: 13px; /* ✅ REDUZIDO DE 14px PARA 13px */
   font-weight: 500;
 }
 
-/* Responsividade */
+/* ✅ RESPONSIVIDADE MELHORADA */
+@media (min-width: 768px) {
+  .card {
+    max-width: 520px;
+    padding: 44px;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .logo {
+    width: 76px;
+    height: 76px;
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    max-width: 550px;
+    padding: 48px;
+  }
+  
+  .title {
+    font-size: 30px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 480px) {
   .card {
     padding: 32px 24px;
+    max-height: 95vh;
   }
 
   .title {
@@ -125,5 +188,41 @@
     width: 64px;
     height: 64px;
     font-size: 32px;
+  }
+  
+  .form {
+    gap: 16px;
+  }
+}
+
+/* ✅ TELAS MUITO PEQUENAS (altura) */
+@media (max-height: 700px) {
+  .card {
+    padding: 28px 36px;
+    max-height: 95vh;
+  }
+  
+  .logoContainer {
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 22px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+  }
+  
+  .form {
+    gap: 16px;
+    margin-top: 20px;
   }
 }

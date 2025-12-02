@@ -62,7 +62,6 @@ const Login = () => {
         {/* Mensagem de Erro */}
         {errorMessage && (
           <div className={styles.error} role="alert">
-            <span>⚠️</span>
             <span>{errorMessage}</span>
           </div>
         )}

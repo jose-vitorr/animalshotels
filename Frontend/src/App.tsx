@@ -28,7 +28,7 @@ const PrivateRoute = ({ children }: PrivateRouteProps) => {
         flexDirection: 'column',
         gap: '20px'
       }}>
-        <h2>⏳ Carregando...</h2>
+        <h2> Carregando...</h2>
         <p>Verificando autenticação...</p>
       </div>
     );

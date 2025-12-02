@@ -33,7 +33,7 @@ const Header = () => {
             onClick={logout}
             className={styles.logoutButton}
           >
-            🚪 Sair
+             Sair
           </Button>
         </div>
       </div>
